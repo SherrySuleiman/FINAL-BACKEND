@@ -1,10 +1,7 @@
 package PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.controller;
 
 import PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.model.Officer;
-import PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.model.Passenger;
-import PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.model.Station;
 import PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.repository.OfficerRepo;
-import PUBLIC_TRANSPORT.PUBLIC_TRANSPORT.repository.PassengerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins ="*",allowedHeaders = "*")
 @RequestMapping("/Officer")
 public class OfficerController {
     @Autowired
